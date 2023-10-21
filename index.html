@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #0b1e27;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .spinner-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .spinning-gear {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border: 10px solid #ff5733;
+            border-radius: 50%;
+            position: relative;
+            animation: spin 3s linear infinite;
+        }
+
+        .gear-tooth {
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            background: #00a5ff;
+            left: 45px;
+            transform-origin: 50% 100%;
+            animation: spin-tooth 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin-tooth {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner-container">
+        <div class="spinning-gear">
+            <div class="gear-tooth"></div>
+        </div>
+    </div>
+</body>
+
+</html>
